@@ -29,20 +29,20 @@ int main ()
         
         case 2:
             printf("PLEASE enter your value: ");
-        scanf("%2lf",&withdraw);
+        scanf("%lf",&withdraw);
 
         amount = amount - withdraw;
 
-        if(amount <= 500){
+        if(amount - withdraw <= 500){
             printf("withdraw is not possible");
         }else{
-            printf("This is you cash. Thank you");
+            printf("This is your cash. Thank you");
         }
         break;
 
         case 3:
             printf("Enter the amount to deposite:");
-            scanf("%2lf",&deposit);
+            scanf("%lf",&deposit);
 
             amount = amount + deposit;
 
@@ -55,8 +55,6 @@ int main ()
         default:
             printf("INVALID CHOICH !"); 
         }
-        i=1;
-    }while(!i);
-        printf("Thank you so much\n");
+    }
     return 0;
 }
